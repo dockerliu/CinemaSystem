@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using BLL;
@@ -167,21 +165,21 @@ namespace CinemaSystem
         }
 
         /// <summary>
-        /// 打印电影票
+        /// 模拟打印电影票
         /// </summary>
         /// <param name="Seat"></param>
         void Print(string Seat)
         {
             //IO打印电影票 1-7-1-20210529
-            string fileName = $"{Seat}-{objSchedule.ID}-{DateTime.Now.ToString("yyyyMMdd")}";
+            string fileName = $"{Seat}-{objSchedule.ID}-{DateTime.Now.ToString("yyyyMMdd")}.txt";
             //创建文件流
             using (FileStream fs=new FileStream(fileName,FileMode.Create))
             {
                 using (StreamWriter sw=new StreamWriter(fs,Encoding.Default))
                 {
                     sw.WriteLine("**************************");
-                    sw.WriteLine("\t 灵犀影院");
-                    sw.WriteLine("-----------------------------------------------------------------------------");
+                    sw.WriteLine("\t 程序员影院");
+                    sw.WriteLine("**************************");
                     sw.WriteLine($"电影名:{objMovie.MovieName}");
                     sw.WriteLine($"时长:{objMovie.Duration}");
                     sw.WriteLine($"放映时间:{objSchedule.PlayTime.Value.ToString("yyyy年mm月dd日 HH:MM")}");
