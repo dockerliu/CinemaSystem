@@ -23,10 +23,9 @@ namespace DAL
 		public int Add(Model.Ticket model)
 		{
 			string sql = @"INSERT INTO Ticket
-				(TicketID,ScheduleID,Price,SeatNo,CreateTime) 
-				VALUES(@TicketID,@ScheduleID,@Price,@SeatNo,@CreateTime)";
+				(ScheduleID,Price,SeatNo,CreateTime) 
+				VALUES(@ScheduleID,@Price,@SeatNo,@CreateTime)";
 			MySqlParameter[] parameters = new MySqlParameter[]{
-				new MySqlParameter("@TicketID", MySqlDbType.Int32, 11){ Value = model.TicketID },
 				model.ScheduleID == null ? new MySqlParameter("@ScheduleID", MySqlDbType.Int32, 11) { Value = DBNull.Value } : new MySqlParameter("@ScheduleID", MySqlDbType.Int32, 11) { Value = model.ScheduleID },
 				new MySqlParameter("@Price", MySqlDbType.Decimal, -1){ Value = model.Price },
 				model.SeatNo == null ? new MySqlParameter("@SeatNo", MySqlDbType.VarChar, 255) { Value = DBNull.Value } : new MySqlParameter("@SeatNo", MySqlDbType.VarChar, 255) { Value = model.SeatNo },

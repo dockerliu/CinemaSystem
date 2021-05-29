@@ -33,6 +33,13 @@ namespace BLL
 			return dataSchedule.GetAll();
 		}
 		/// <summary>
+		/// 查询所有上映电影记录
+		/// </summary>
+		public List<Model.Schedule> GetAllSchedule()
+		{
+			return dataSchedule.GetAllSchedule();
+		}
+		/// <summary>
 		/// 查询单条记录
 		/// </summary>
 		public Model.Schedule Get(int id)

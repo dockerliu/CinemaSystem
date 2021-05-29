@@ -99,6 +99,17 @@ namespace DAL
 			return List;
 		}
 		/// <summary>
+		/// 查询所有上映电影记录
+		/// </summary>
+		public List<Model.Schedule> GetAllSchedule()
+		{
+			string sql = "SELECT ID, MovieID, HallID, PlayTime, Discount FROM `Schedule` WHERE MovieID IN (SELECT MovieID FROM Movie) ORDER BY MovieID, PlayTime";
+			MySqlDataReader dataReader = dbHelper.GetDataReader(sql);
+			List<Model.Schedule> List = DataReaderToList(dataReader);
+			dataReader.Close();
+			return List;
+		}
+		/// <summary>
 		/// 查询记录数
 		/// </summary>
 		public long GetCount()
