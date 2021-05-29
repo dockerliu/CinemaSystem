@@ -55,6 +55,11 @@ namespace CinemaSystem
             this.lblMovieName = new System.Windows.Forms.Label();
             this.picPoster = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.c教程分享ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.更多教程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.请关注我油管ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.配套视频ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于我ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,15 +81,22 @@ namespace CinemaSystem
             // 
             // 影院管理ToolStripMenuItem
             // 
+            this.影院管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.c教程分享ToolStripMenuItem,
+            this.更多教程ToolStripMenuItem,
+            this.请关注我油管ToolStripMenuItem});
             this.影院管理ToolStripMenuItem.Name = "影院管理ToolStripMenuItem";
             this.影院管理ToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.影院管理ToolStripMenuItem.Text = "影院管理";
             // 
             // 系统ToolStripMenuItem
             // 
+            this.系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.配套视频ToolStripMenuItem,
+            this.关于我ToolStripMenuItem});
             this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
             this.系统ToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.系统ToolStripMenuItem.Text = "系统";
+            this.系统ToolStripMenuItem.Text = "关于";
             // 
             // groupBox1
             // 
@@ -315,6 +327,41 @@ namespace CinemaSystem
             this.label1.TabIndex = 0;
             this.label1.Text = "片名：";
             // 
+            // c教程分享ToolStripMenuItem
+            // 
+            this.c教程分享ToolStripMenuItem.Name = "c教程分享ToolStripMenuItem";
+            this.c教程分享ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.c教程分享ToolStripMenuItem.Text = "C#教程分享";
+            this.c教程分享ToolStripMenuItem.Click += new System.EventHandler(this.c教程分享ToolStripMenuItem_Click);
+            // 
+            // 更多教程ToolStripMenuItem
+            // 
+            this.更多教程ToolStripMenuItem.Name = "更多教程ToolStripMenuItem";
+            this.更多教程ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.更多教程ToolStripMenuItem.Text = "更多教程";
+            this.更多教程ToolStripMenuItem.Click += new System.EventHandler(this.更多教程ToolStripMenuItem_Click);
+            // 
+            // 请关注我油管ToolStripMenuItem
+            // 
+            this.请关注我油管ToolStripMenuItem.Name = "请关注我油管ToolStripMenuItem";
+            this.请关注我油管ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.请关注我油管ToolStripMenuItem.Text = "请关注我油管";
+            this.请关注我油管ToolStripMenuItem.Click += new System.EventHandler(this.请关注我油管ToolStripMenuItem_Click);
+            // 
+            // 配套视频ToolStripMenuItem
+            // 
+            this.配套视频ToolStripMenuItem.Name = "配套视频ToolStripMenuItem";
+            this.配套视频ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.配套视频ToolStripMenuItem.Text = "配套视频";
+            this.配套视频ToolStripMenuItem.Click += new System.EventHandler(this.配套视频ToolStripMenuItem_Click);
+            // 
+            // 关于我ToolStripMenuItem
+            // 
+            this.关于我ToolStripMenuItem.Name = "关于我ToolStripMenuItem";
+            this.关于我ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.关于我ToolStripMenuItem.Text = "关于我";
+            this.关于我ToolStripMenuItem.Click += new System.EventHandler(this.关于我ToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -367,6 +414,11 @@ namespace CinemaSystem
         private System.Windows.Forms.Label lblMovieName;
         private System.Windows.Forms.PictureBox picPoster;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem c教程分享ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 更多教程ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 请关注我油管ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 配套视频ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于我ToolStripMenuItem;
     }
 }
 

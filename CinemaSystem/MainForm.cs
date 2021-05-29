@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -191,6 +192,45 @@ namespace CinemaSystem
                 }
             }
 
+        }
+
+        /*
+             广告预警
+              视情况完善本程序
+         */
+
+        private void c教程分享ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenUrl();
+        }
+
+        private void 更多教程ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenUrl();
+        }
+
+        private void 请关注我油管ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenUrl();
+        }
+
+        private void 配套视频ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("IEXPLORE.EXE", "https://www.youtube.com/watch?v=bTiaRzi23TU&list=PLJgD_fXVXZKppT4stJ09s9nu3byvyMERE&index=46");
+        }
+
+        private void 关于我ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenUrl();
+        }
+
+       
+        public void OpenUrl()
+        {
+            Process pro = new Process();
+            pro.StartInfo.FileName = "iexplore.exe";
+            pro.StartInfo.Arguments = "https://www.youtube.com/channel/UC50Db-4KpjBUiCULD9KRfiQ";
+            pro.Start();
         }
     }
 }
